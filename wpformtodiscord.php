@@ -27,7 +27,7 @@ function send_wpforms_to_discord($fields, $entry, $form_data, $entry_id) {
         'content' => $message,
     ];
 
-    $response = wp_safe_remote_post($discord_webhook_url, [
+    $response = wp_safe_remote_post($webhook_url, [
         'body' => json_encode($data),
         'headers' => [
             'Content-Type' => 'application/json',
